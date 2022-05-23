@@ -1,0 +1,7 @@
+<h1>Les Darons</h1>
+
+<ol>
+  <% @darons.each do |daron| %>
+    <li><%= link_to daron.name, list_path(daron.id) %></li>
+  <% end %>
+</ol>
