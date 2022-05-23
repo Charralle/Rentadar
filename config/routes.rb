@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'index/new'
-  get 'index/create'
+  get 'darons/new'
+  get 'darons/create'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
