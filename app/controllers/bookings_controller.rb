@@ -21,7 +21,6 @@ class BookingsController < ApplicationController
     @booking.price = @daron.price
     @booking.total_price = @daron.price * (number_of_days)
     @booking.location = @daron.zip_code
-    raise
     if @booking.save
       redirect_to daron_path(@daron)
     else
