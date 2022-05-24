@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+50.times do
+  Daron.create(
+    name: Faker::Name.first_name,
+    price: rand(0..1000),
+    bio: Faker::Lorem.sentence(word_count: 15),
+    )
+end
