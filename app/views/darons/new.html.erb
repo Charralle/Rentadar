@@ -1,7 +1,15 @@
-<%= simple_form_for [@daron] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :profile_picture %>
-  <%= f.input :price %>
-  <%= f.input :bio %>
-  <%= f.submit "Submit new daron", class: "btn btn-primary" %>
-<% end %>
+<h1> </h1>
+  <div class="image_daron">
+  </div>
+
+  <div class="container_form">
+    <div class="form_center">
+        <%= simple_form_for [@daron] do |f| %>
+          <%= f.input :name %>
+          <%= f.input :profile_picture %>
+          <%= f.input :price %>
+          <%= f.input :bio %>
+          <%= f.submit "Submit new daron", class: "btn btn-gradient" %>
+        <% end %>
+    </div>
+  </div>
