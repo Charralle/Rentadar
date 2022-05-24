@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'darons/new'
-  get 'darons/create'
-  get 'darons/index'
+
+  resources :darons do
+    resources :bookings, only: [:new, :index, :create, :update]
+  end
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
