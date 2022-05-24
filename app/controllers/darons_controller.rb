@@ -19,6 +19,8 @@ class DaronsController < ApplicationController
 
   def show
     @daron = Daron.find(params[:id])
+    @user = User.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit
