@@ -50,6 +50,6 @@ class DaronsController < ApplicationController
   def badges_params
   end
 
-  def location_params
+  def zip_code_params
   end
 end

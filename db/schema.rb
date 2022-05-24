@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_23_141300) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_095247) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_141300) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "darons_id"
+    t.index ["darons_id"], name: "index_bookings_on_darons_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "darons", force: :cascade do |t|
@@ -31,6 +35,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_141300) do
     t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.string "badges"
+    t.integer "zip_code"
+    t.string "phone_number"
+    t.index ["user_id"], name: "index_darons_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,4 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_141300) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "darons", column: "darons_id"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "darons", "users"
 end
