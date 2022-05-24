@@ -1,7 +1,9 @@
 <h1>Les Darons</h1>
 
-<ol>
   <% @darons.each do |daron| %>
-    <li><%= link_to daron.name, list_path(daron.id) %></li>
+    <img src="<%= daron.profile_picture %>" alt="">
+    <p><%= link_to daron.name, daron_path(daron.id) %></p>
+    <p>TJM: <%= daron.price %></p>
+    <p>Bio: <%= daron.bio %></p>
+
   <% end %>
-</ol>

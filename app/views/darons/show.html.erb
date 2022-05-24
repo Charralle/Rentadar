@@ -1,0 +1,9 @@
+<h2><%= @daron.name %></h2>
+<div class="container text-end">
+  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=edit_daron_path(@daron)%>" role="button">Edit</a>
+  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=darons_path()%>" role="button">Back</a>
+</div>
+
+<img src="<%= @daron.profile_picture %>" alt="">
+<p>TJM: <%= @daron.price %></p>
+<p>Bio: <%= @daron.bio %></p>
