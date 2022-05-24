@@ -1,9 +1,17 @@
-<h1>Les Darons</h1>
 
-  <% @darons.each do |daron| %>
-    <img src="<%= daron.profile_picture %>" alt="">
-    <p><%= link_to daron.name, daron_path(daron.id) %></p>
-    <p>TJM: <%= daron.price %></p>
-    <p>Bio: <%= daron.bio %></p>
+<h1 class = 'cool_title'>Les Darons</h1>
 
-  <% end %>
+<div class='daron_cards'>
+  <div class="cards">
+    <% @darons.each do |daron| %>
+      <%= link_to daron_path(daron.id) do %>
+        <div class="card">
+        <img class="card-img-top" src="<%= daron.profile_picture %>" alt="">
+          <h2><%= daron.name %></h2>
+          <h5>Prix : <%= daron.price %> €</h5>
+          <p>Bio : <%= daron.bio %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

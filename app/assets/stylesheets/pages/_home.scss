@@ -1,12 +1,11 @@
 
-
-
 *, *::before, *::after { box-sizing: border-box; }
 
-body {
+.navbar {
   background: HSLA(0, 0%, 96%, 1.00);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   margin-top: 100px;
+  background-color: white;
 }
 
 .product-search {
@@ -68,7 +67,7 @@ body {
   background-color: HSLA(345, 100%, 60%, 1.00);
 }
 
-body {
+.navbar {
   margin: 0;
   font-family: sans-serif;
 }
