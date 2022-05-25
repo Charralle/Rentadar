@@ -6,8 +6,9 @@
   <div class="image_daron">
   </div>
 
-  <div class="container_form">
+  <div class="daron_new_form">
     <div class="form_center">
+    <div class="segment">
         <%= simple_form_for [@daron] do |f| %>
           <%= f.input :name %>
           <%= f.input :profile_picture %>
@@ -16,11 +17,9 @@
           <%= f.input :badges %>
           <%= f.input :zip_code %>
           <%= f.input :phone_number %>
+           <div class="unit">
           <%= f.submit "Submit for a new Daron", class: "btn btn-danger" %>
-
-</div>
         <% end %>
     </div>
   </div>
-
-  <%= link_to "Back Home", root_path %>
+<%= link_to "Back Home", root_path %>

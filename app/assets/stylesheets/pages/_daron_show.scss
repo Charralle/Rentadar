@@ -1,0 +1,81 @@
+.daron_show_name{
+text-decoration: underline;
+text-align: center;
+font-weight:bolder;
+border-style:bold;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+// padding-left: 20px;
+// padding-right: 20px;
+// background-color: rgb(52, 62, 206);
+// border-radius: 5px 25px;
+// color: yellow;
+// font-weight: bold;
+// border-color: yellow;
+// height: 180px;
+// width: 180px;
+}
+
+.image_daron_show {
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+display: block;
+height: 150px;
+width: 150px;
+border-radius: 50%;
+object-fit:cover;
+}
+
+.btn {
+border-style:bold;
+padding-left: 20px;
+padding-right: 20px;
+background-color: blue;
+border-radius: 5px 25px;
+color: yellow;
+font-weight: bold;
+border-color: yellow;
+height: auto;
+width: auto;
+}
+
+.daron_info {
+  align-items: center;
+  text-align: center;
+  font-weight:bolder;
+  font-style:italic;
+  border-style:bold;
+padding: 4px;
+width: 80px;
+height: auto;
+background-color: whitesmoke;
+border-radius: 25px;
+color: black;
+font-weight: bold;
+border-color: blue;
+
+}
+
+.center {
+  margin: auto;
+  width: 20%;
+  border: 3px solid blue;
+  padding: 10px;
+}
+
+.booking_form{
+
+
+}
+
+.titre_resa {
+  text-decoration: underline;
+  text-align: center;
+  font-weight:bolder;
+  border-style:bold;
+  font-size:medium;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
