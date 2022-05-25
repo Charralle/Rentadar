@@ -1,23 +1,44 @@
-<h2>Dashboard</h2>
 
-<h2>Vos bons moments à venir avec un Dar bien senti</h2>
-  <% @bookings.each do |booking| %>
-    <% if booking.end_date > Time.now %>
-    <p>Email de votre kidz': <%= booking.user.email %><p>
-    <p>Prix total : <%= booking.total_price %></p>
-    <p>Departement: <%= booking.location %></p>
-    <p>Date de début de la prestation: <%= booking.start_date %> - Date de fin: <%= booking.end_date %></p>
-    <p>Durée totale <%= booking.end_date - booking.start_date %></p>
-  <% end %>
-<% end %>
+<h2 class="cool_title p-3">Vos bons moments à venir</h2>
+<h2 class="cool_title p-3">Avec un Dar bien senti</h2>
 
-<h2>Vos bons moments passés</h2>
-  <% @bookings.each do |booking| %>
-    <% if booking.end_date < Time.now %>
-    <h2>Email de votre kidz': <%= booking.user.email %></h2>
-    <p>Prix total : <%= booking.total_price %>$</p>
-    <p>Departement: <%= booking.location %>$</p>
-    <p>Date de début de la prestation: <%= booking.start_date %> - Date de fin: <%= booking.end_date %></p>
-    <p>Durée totale <%= booking.end_date - booking.start_date %></p>
-  <% end %>
-<% end %>
+<div class="container">
+  <div class="card-group">
+      <% @bookings.each do |booking| %>
+        <% if booking.end_date > Time.now %>
+          <div class="card">
+            <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
+            <div class="card-body">
+              <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
+              <p class="card-text">Prix total : <%= booking.total_price %>$</p>
+              <p class="card-text">Departement: <%= booking.location %></p>
+              <p class="card-text">Début du bon moment: <%= booking.start_date %></p>
+              <p class="card-text">Fin du bon moment: <%= booking.end_date %></p>
+              <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
+            </div>
+          </div>
+          <% end %>
+      <% end %>
+    </div>
+</div>
+
+
+
+<h2 class="cool_title p-5">Vos bons moments passés</h2>
+<div class="container">
+  <div class="card-group">
+    <% @bookings.each do |booking| %>
+      <% if booking.end_date < Time.now %>
+        <div class="card">
+          <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
+          <div class="card-body">
+            <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
+            <p class="card-text">Prix total : <%= booking.total_price %>$</p>
+            <p class="card-text">Departement: <%= booking.location %></p>
+            <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
