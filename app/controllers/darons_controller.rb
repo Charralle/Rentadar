@@ -46,7 +46,7 @@ class DaronsController < ApplicationController
   private
 
   def daron_params
-    params.require(:daron).permit(:name, :profile_picture, :bio, :price)
+    params.require(:daron).permit(:name, :profile_picture, :bio, :price, :badges, :zip_code, :phone_number)
   end
 
   def badges_params
