@@ -172,3 +172,30 @@ margin-top: 50px;
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+.see_darons {
+  margin-top: auto;
+
+}
+
+.typewriter_daron_new {
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid red; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typingV 3.5s steps(100, end),
+    blink-caretV .75s step-end infinite;
+}
+
+@keyframes typingV {
+  from { width: 0% }
+  to { width: 100% }
+}
+
+@keyframes blink-caretV {
+  from, to { border-color: transparent }
+  100% { border-color: red; }
+}
