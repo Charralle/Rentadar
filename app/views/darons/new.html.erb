@@ -1,4 +1,8 @@
-<h1> </h1>
+
+  <div class= typewriter_daron_new>
+    <p>N'attends plus ! poses ta Rent ci-dessous</p>
+  </div>
+
   <div class="image_daron">
   </div>
 
@@ -10,12 +14,12 @@
           <%= f.input :profile_picture %>
           <%= f.input :price %>
           <%= f.input :bio %>
-          <div class="unit">
-          <%= f.submit "Submit new daron", class: "btn btn-gradient" %>
-          </div>
+          <%= f.input :badges %>
+          <%= f.input :zip_code %>
+          <%= f.input :phone_number %>
+           <div class="unit">
+          <%= f.submit "Submit for a new Daron", class: "btn btn-danger" %>
         <% end %>
     </div>
   </div>
-
-
-<form>
+<%= link_to "Back Home", root_path %>
