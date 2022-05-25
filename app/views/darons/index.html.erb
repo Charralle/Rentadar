@@ -16,8 +16,8 @@
 </form>
 
 
-<div class='daron_cards'>
-  <div class="cards">
+<%# <div class='daron_cards'>
+ %>  <div class="cards">
     <% @darons.each do |daron| %>
       <%= link_to daron_path(daron.id) do %>
         <div class="card">
@@ -32,7 +32,7 @@
       <% end %>
     <% end %>
   </div>
-</div>
-
+<%# </div>
+ %>
 <%= link_to "Back Home", root_path %>
 <%= link_to "Create new Daron", new_daron_path %>

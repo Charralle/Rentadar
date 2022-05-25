@@ -43,36 +43,17 @@ border-radius: 0% 10%;
 }
 
 
-.daron_cards {
-
-  height: 700px;
-  padding-top: 0%;
+.cards,.card-group {
   display: grid;
-  grid-gap: 100px;
-  place-items: center;
-  background: white;
-  overflow: hidden;
-
-text-align: center;
-place-content: center;
-
-}
-
-.cards {
-  height: 500px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
   padding-top: 0%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   text-align: center;
-  width: calc(100vw - 80px);
-  flex-wrap: wrap;
-
-
+  padding: 5% 10%;
 }
+
 a {
     text-decoration: none;
-    width: 20%;
 }
 
 #daron_search_form {
@@ -87,7 +68,7 @@ a {
   transition: 0.2s;
   color: black;
   text-align: center;
-  width: 100%;
+  margin: 10px;
   height: 500px;
   p { height: 40px; }
   * {
