@@ -8,4 +8,5 @@ class Daron < ApplicationRecord
   validates :zip_code, presence: true
   validates :phone_number, presence: true
   validates :profile_picture, presence: true
+  belongs_to :user
 end
