@@ -10,7 +10,8 @@ class DaronsController < ApplicationController
 
   def create
     @daron = Daron.new(daron_params)
-    if @daron.save
+    @daron.user = current_user
+    if @daron.save!
       redirect_to daron_path(@daron)
     else
       render :new, status: :unprocessable_entity
@@ -46,7 +47,7 @@ class DaronsController < ApplicationController
   private
 
   def daron_params
-    params.require(:daron).permit(:name, :profile_picture, :bio, :price, :badges, :zip_code, :phone_number)
+    params.require(:daron).permit(:name, :profile_picture, :badges, :bio, :price, :zip_code, :phone_number)
   end
 
   def badges_params
