@@ -19,10 +19,10 @@ class BookingsController < ApplicationController
     @booking.daron = @daron
     number_of_days = @booking.end_date - @booking.start_date
     @booking.price = @daron.price
-    @booking.total_price = @daron.price * (number_of_days)
+    @booking.total_price = @daron.price.to_i * (number_of_days.to_i)
     @booking.location = @daron.zip_code
     if @booking.save
-      redirect_to daron_path(@daron)
+      redirect_to dashboard_path(current_user)
     else
       render :darons/show, status: :unprocessable_entity
     end

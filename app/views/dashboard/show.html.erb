@@ -1,0 +1,23 @@
+<h2>Dashboard</h2>
+
+<h2>Vos bons moments à venir avec un Dar bien senti</h2>
+  <% @bookings.each do |booking| %>
+    <% if booking.end_date > Time.now %>
+    <p>Email de votre kidz': <%= booking.user.email %><p>
+    <p>Prix total : <%= booking.total_price %></p>
+    <p>Departement: <%= booking.location %></p>
+    <p>Date de début de la prestation: <%= booking.start_date %> - Date de fin: <%= booking.end_date %></p>
+    <p>Durée totale <%= booking.end_date - booking.start_date %></p>
+  <% end %>
+<% end %>
+
+<h2>Vos bons moments passés</h2>
+  <% @bookings.each do |booking| %>
+    <% if booking.end_date < Time.now %>
+    <h2>Email de votre kidz': <%= booking.user.email %></h2>
+    <p>Prix total : <%= booking.total_price %>$</p>
+    <p>Departement: <%= booking.location %>$</p>
+    <p>Date de début de la prestation: <%= booking.start_date %> - Date de fin: <%= booking.end_date %></p>
+    <p>Durée totale <%= booking.end_date - booking.start_date %></p>
+  <% end %>
+<% end %>
