@@ -44,17 +44,18 @@ border-radius: 0% 10%;
 
 
 .daron_cards {
-  margin: 0;
+
   height: 700px;
   padding-top: 0%;
   display: grid;
-
+  grid-gap: 100px;
   place-items: center;
   background: white;
   overflow: hidden;
-  align-items: center;
+
 text-align: center;
 place-content: center;
+
 }
 
 .cards {
@@ -66,6 +67,7 @@ place-content: center;
   text-align: center;
   width: calc(100vw - 80px);
   flex-wrap: wrap;
+
 
 }
 a {
