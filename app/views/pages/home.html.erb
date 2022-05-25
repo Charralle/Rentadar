@@ -14,11 +14,11 @@
  <h1>Rent a Dar !</h1>
 
  <div class= typewriter>
- <p>T'as pas de daron? Loues en un dans ta région! </p>
+ <p>T'as pas de daron? Loue en un dans ta région! </p>
  </div>
 <%# LA SEARCHBAR  %>
 
-<form class= "homepage_search"action="" method="get">
+<form class= "homepage_search" action="" method="get">
   <div class="product-search">
       <div class="search-element">
         <label class="search-label">Quelle Specialité cherchez vous?</label>
@@ -26,9 +26,9 @@
       </div>
       <div class="search-element">
         <label class="search-label">Ou cherchez vous?</label>
-        <input class="search-input" type="text" placeholder="Code Postal..." class="" autocomplete="on" name="zip_code">
+        <input class="search-input" type="text" placeholder="Code Postal..." autocomplete="on" name="zip_code">
       </div>
-      <a type="submit" class="search-button">Yes papa!</a>
+      <a type="submit" value="Search" class="search-button">Yes papa!</a>
   </div>
 </form>
 
@@ -38,7 +38,19 @@
 
 
 </body>
+<br>
+<br>
+<br>
 
+<div class= "bouton_homepage">
 <div class="see_darons">
 <%= link_to "See Darons", darons_path %>
+</div>
+
+<br>
+<br>
+
+<div class="sign_up">
+<%= link_to "Sign Up!", new_user_registration_path %>
+</div>
 </div>
