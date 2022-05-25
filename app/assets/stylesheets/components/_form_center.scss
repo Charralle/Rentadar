@@ -1,0 +1,29 @@
+.container_form {
+ margin: 5px;
+ padding: 0% 15%;
+ text-align: center;
+ color: black;
+font-size: xx-large;
+margin-left: 200px;
+margin-right: 200px;
+margin-bottom: 0rem !important;
+background-color: #0B77C3;
+border-radius: 5%;
+}
+
+.image_daron {
+    background-image: image-url("swindler.jpeg");
+    background-size: cover;
+    background-position:  30% 16%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}

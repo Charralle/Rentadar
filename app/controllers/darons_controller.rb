@@ -17,6 +17,12 @@ class DaronsController < ApplicationController
     end
   end
 
+  def show
+    @daron = Daron.find(params[:id])
+    @user = current_user
+    @booking = Booking.new
+  end
+
   def edit
     @daron = Daron.find(params[:id])
   end
@@ -39,7 +45,13 @@ class DaronsController < ApplicationController
 
   private
 
-  def list_params
+  def daron_params
     params.require(:daron).permit(:name, :profile_picture, :bio, :price)
+  end
+
+  def badges_params
+  end
+
+  def zip_code_params
   end
 end

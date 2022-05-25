@@ -1,0 +1,18 @@
+<h2><%= @daron.name %></h2>
+<div class="container text-end">
+  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=edit_daron_path(@daron)%>" role="button">Edit</a>
+  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=darons_path()%>" role="button">Back</a>
+</div>
+
+<img src="<%= @daron.profile_picture %>" alt="">
+<p>TJM: <%= @daron.price %></p>
+<p>Bio: <%= @daron.bio %></p>
+
+<h2>Réserver un créneau avec <%= @daron.name %></h2>
+
+  <%= simple_form_for [@daron, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.submit %>
+  <% end %>
+</div>

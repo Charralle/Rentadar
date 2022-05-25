@@ -1,0 +1,70 @@
+
+.cool_title {
+  text-align: center;
+ padding-left: 2%;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 80px;
+  transform: skewY(-5deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: red;
+  text-shadow:
+    -1px -1px 0 rgb(30, 100, 206),
+    -2px -2px 0 rgb(30, 100, 206),
+    -3px -3px 0 rgb(30, 100, 206),
+    -4px -4px 0 rgb(30, 100, 206),
+    -5px -5px 0 rgb(30, 100, 206),
+    -6px -6px 0 rgb(30, 100, 206),
+    -7px -7px 0 rgb(30, 100, 206),
+    -8px -8px 0 rgb(30, 100, 206),
+    -30px 20px 40px orangered
+}
+
+
+.daron_cards {
+  margin: 0;
+  height: 500px;
+  padding-top: 10%;
+  display: grid;
+  place-items: center;
+  background: white;
+  overflow: hidden;
+}
+
+.cards {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction:row;
+
+}
+a {
+    text-decoration: none;
+}
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 12px 2px rgba(black, 0.6);
+  transition: 0.2s;
+  color: black;
+  text-align: center;
+  width: 250px;
+  height: 340px;
+  p { height: 40px; }
+  * {
+    text-decoration: none;
+  }
+}
+
+.card-img-top{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin: auto;
+  border: solid;
+}
+
+.card:hover {
+  transform: translate(2rem, -1rem);
+}
