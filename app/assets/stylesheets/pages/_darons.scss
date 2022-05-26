@@ -6,16 +6,17 @@ place-content: center;
 display: flex;
 border-style: solid;
 border-color: blue;
-padding: 2%;
+padding: 1%;
 border-radius: 25px;
 }
 
 .button_search_index{
-padding: 5%;
+padding: 3%;
 border-style: solid;
-border-color: blue;
-background-color: yellow;
-border-radius: 0% 10%;
+border-color: lightgrey;
+background-color: white;
+margin-left: 1rem;
+border-radius: 0% 10% 0% 10%;
 
 
 }
@@ -29,7 +30,7 @@ border-radius: 0% 10%;
   // transform: skewY(-5deg);
   letter-spacing: 4px;
   word-spacing: -8px;
-  color: yellow;
+  color: red;
   text-shadow:
     -1px -1px 0 rgb(30, 100, 206),
     -2px -2px 0 rgb(30, 100, 206),
@@ -39,14 +40,14 @@ border-radius: 0% 10%;
     -6px -6px 0 rgb(30, 100, 206),
     -7px -7px 0 rgb(30, 100, 206),
     -8px -8px 0 rgb(30, 100, 206),
-    -30px 20px 40px yellow
+
 }
 
 
 .cards,.card-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 40px;
   padding-top: 0%;
   text-align: center;
   padding: 5% 10%;
