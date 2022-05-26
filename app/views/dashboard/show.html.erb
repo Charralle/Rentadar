@@ -13,7 +13,9 @@
               <p class="card-text">Prix total : <%= booking.total_price %>$</p>
               <p class="card-text">Departement: <%= booking.location %></p>
               <p class="card-text">Début du bon moment: <%= booking.start_date %></p>
+              <br>
               <p class="card-text">Fin du bon moment: <%= booking.end_date %></p>
+              <br>
               <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
             </div>
           </div>
