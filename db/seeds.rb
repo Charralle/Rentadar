@@ -1,8 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-User.destroy_all
-Daron.destroy_all
 Booking.destroy_all
+Daron.destroy_all
+User.destroy_all
 
 require 'faker'
 AUTHORIZED_CATEGORIES = ["Rangement", "Compta", "Magie", "Patisserie", "Representation", "Eloquence", "Soutient Scolaire", "Tourisme", "Militantisme", "Cuisine", "Mécano", "Libertinage", "Borderline", "Culture", "Bricolo", "Sportif", "Jedi", "Esthétique", "Couture", "Gaming", "Soutient émotionnel", "Sorcellerie", "Transport"]
@@ -14,7 +14,7 @@ first_user = User.create!(
   password: 'azerty'
 )
 
-  Daron.create!(
+  Daron.create(
     name: 'Clown',
     profile_picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pennywise_Cosplay_3.jpg/800px-Pennywise_Cosplay_3.jpg',
     price: '23',
@@ -34,7 +34,7 @@ first_user = User.create!(
   password: 'azerty'
 )
 
-  Daron.create!(
+  Daron.create(
     name: 'A seed',
     profile_picture: 'https://www.bdxc.fr/images/_bdxc/1620653759_1667160386/1620653759_1667160386_screencity_full.jpg',
     price: '23',
@@ -45,7 +45,7 @@ first_user = User.create!(
     user: first_user
     )
 
-    Daron.create!(
+    Daron.create(
       name: 'Akram',
       profile_picture: 'https://www.turbo.fr/sites/default/files/styles/article_690x405/public/2019-09/interview-akram-junior_1.png.webp?itok=3w2vxvsE',
       price: '34',
