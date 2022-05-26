@@ -1,44 +1,55 @@
 
-<h2 class="cool_title p-3">Vos bons moments à venir</h2>
-<h2 class="cool_title p-3">Avec un Dar bien senti</h2>
+<h2 class="cool_title m-5">Vos bons moments à venir</h2>
+<h2 class="cool_title m-5">Avec un Dar bien senti</h2>
 
 <div class="container">
-  <div class="card-group">
-      <% @bookings.each do |booking| %>
-        <% if booking.end_date > Time.now %>
-          <div class="card">
-            <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
-            <div class="card-body">
-              <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
-              <p class="card-text">Prix total : <%= booking.total_price %>$</p>
-              <p class="card-text">Departement: <%= booking.location %></p>
-              <p class="card-text">Début du bon moment: <%= booking.start_date %></p>
-              <p class="card-text">Fin du bon moment: <%= booking.end_date %></p>
-              <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
-            </div>
-          </div>
-          <% end %>
-      <% end %>
-    </div>
-</div>
-
-
-
-<h2 class="cool_title p-5">Vos bons moments passés</h2>
-<div class="container">
-  <div class="card-group">
+  <div class="card-group-dash">
     <% @bookings.each do |booking| %>
-      <% if booking.end_date < Time.now %>
-        <div class="card">
+      <% if booking.end_date > Time.now %>
+        <div class="card_dash">
           <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
           <div class="card-body">
             <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
-            <p class="card-text">Prix total : <%= booking.total_price %>$</p>
+            <p class="card-text">Compétence: <%= booking.daron.badges %></p>
+            <p class="card-text">Prix total: <%= booking.total_price %>$</p>
             <p class="card-text">Departement: <%= booking.location %></p>
             <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
+            <%= link_to "Annuler #{booking.daron.name}",
+              daron_booking_path(booking.daron, booking),
+              class: "btn btn-outline-danger btn-sm text-hover-light",
+              data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
           </div>
         </div>
       <% end %>
     <% end %>
+  </div>
+</div>
+
+
+<h2 class="cool_title m-5">Vos bons moments passés</h2>
+<div class="container">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 50vw; margin: 0 auto;">
+    <div class="carousel-inner">
+      <% @past_bookings.each_with_index do |booking, index| %>
+            <div class="carousel-item <% if index == 0 %>active<% end %> mt-5">
+              <div class="card_dash">
+                <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
+                <div class="card-body">
+                  <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
+                  <p class="card-text">Prix total : <%= booking.total_price %>$</p>
+                  <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
+                </div>
+              </div>
+            </div>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </div>
