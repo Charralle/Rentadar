@@ -1,8 +1,11 @@
-<h2 class= 'daron_show_name'><%= @daron.name %></h2>
-<div class="container text-end">
-  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=edit_daron_path(@daron)%>" role="button">Edit</a>
-  <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=darons_path()%>" role="button">Back</a>
-</div>
+<%# hey %>
+<% if current_user.id == @daron.user_id %>
+  <h2 class= 'daron_show_name'><%= @daron.name %></h2>
+  <div class="container text-end">
+    <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=edit_daron_path(@daron)%>" role="button">Edit</a>
+    <a class="btn btn-outline-danger btn-sm text-hover-light" href="<%=darons_path()%>" role="button">Back</a>
+  </div>
+<% end %>
 
 <img class = 'image_daron_show' src="<%= @daron.profile_picture %>" alt="">
 <br>
