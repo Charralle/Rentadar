@@ -50,7 +50,6 @@ border-radius: 0% 10% 0% 10%;
   grid-gap: 40px;
   padding-top: 0%;
   text-align: center;
-  padding: 5% 10%;
 }
 
 a {
@@ -70,11 +69,37 @@ a {
   color: black;
   text-align: center;
   margin: 10px;
-  height: 700px;
+  height: 500px;
+  width: 300px;
   p { height: 40px; }
   * {
     text-decoration: none;
   }
+}
+
+.card_dash {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 12px 2px rgba(black, 0.6);
+  transition: 0.2s;
+  color: black;
+  text-align: center;
+  margin: 10px;
+  height: 700px;
+  width: 300px;
+  p { height: 40px; }
+  * {
+    text-decoration: none;
+  }
+}
+
+.cards_dash,.card-group-dash {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  padding-top: 0%;
+  text-align: center;
 }
 
 .card-img-top{
@@ -90,5 +115,9 @@ a {
 
 
 .card:hover {
+  transform: translate(2rem, -1rem);
+}
+
+.card_dash:hover {
   transform: translate(2rem, -1rem);
 }

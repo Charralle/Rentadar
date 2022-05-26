@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :darons do
-    resources :bookings, only: [:new, :index, :create, :update]
+    resources :bookings, only: [:new, :index, :create, :update, :destroy]
   end
   devise_for :users
   resources :dashboard, only: [:show]
