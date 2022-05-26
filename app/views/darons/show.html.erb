@@ -1,4 +1,4 @@
-<%# hey %>
+
 <% if current_user.id == @daron.user_id %>
   <h2 class= 'daron_show_name'><%= @daron.name %></h2>
   <div class="container text-end">
@@ -26,3 +26,9 @@
     <%= f.submit %>
   <% end %>
 </div>
+
+<%# <label for="start">Start date:</label>
+
+<input type="date" id="start" name="start_date"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31"> %>
