@@ -4,15 +4,15 @@
 <form action="/darons" method="get" id="daron_search_form">
   <div class="daron_search_index">
       <div class="search-element">
-        <label class="search-label">Quelle Specialité cherchez vous?</label>
+        <label class="search-label cool_title_small">Quelle  Specialité  cherchez  vous  ?</label>
         <input class="search-input" type="text" autocomplete="on" placeholder="Cuisine, Mecano..." name="badges">
       </div>
       <div class="search-element">
-        <label class="search-label">Ou cherchez vous?</label>
+        <label class="search-label cool_title_small">Ou  cherchez  vous?</label>
         <input class="search-input" type="text" placeholder="Code Postal..." autocomplete="on" name="zip_code">
       </div>
       <div class="search-element">
-        <input type="submit" class="search-button">
+        <input type="submit", class="search-button", value="DARONIZE">
       </div>
   </div>
 </form>
@@ -22,13 +22,21 @@
     <% @darons.each do |daron| %>
       <%= link_to daron_path(daron.id) do %>
         <div class="card_dash">
-        <img class="card-img-top" src="<%= daron.profile_picture %>" alt="">
-          <h2><%= daron.name %></h2>
-          <h5>Prix : <%= daron.price %> €</h5>
-          <p>Bio : <%= daron.bio %></p>
-          <br><br>
-          <br><br>
-          <p >Compétence : <%= daron.badges %></p>
+          <img class="card-img-top" src="<%= daron.profile_picture %>" alt="">
+          <div class="card-body">
+            <h2 class="card-title cool_title_small"><strong><%= daron.name %></strong></h2>
+            <p class="card-text">Bio: <%= daron.bio %></p>
+            <br>
+            <br>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Compétence: <%= daron.badges %></li>
+            <li class="list-group-item">TJM: <%= daron.price %>$</li>
+            <li class="list-group-item">Département: <%= daron.zip_code %></li>
+          </ul>
+            <br>
+            <br>
+          <button type="button" class="btn btn-danger btn-lg w-5">Réserver !</button>
         </div>
       <% end %>
     <% end %>

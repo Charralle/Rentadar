@@ -43,6 +43,21 @@ border-radius: 0% 10% 0% 10%;
 
 }
 
+.cool_title_small {
+  text-align: center;
+  text-decoration: underline;
+ padding-left: 2%;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 20px;
+  // transform: skewY(-5deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: red;
+  text-shadow:
+    -1px -1px 0 rgb(30, 100, 206),
+    -2px -2px 0 rgb(30, 100, 206),
+}
+
 
 .cards,.card-group {
   display: grid;
@@ -50,6 +65,7 @@ border-radius: 0% 10% 0% 10%;
   grid-gap: 40px;
   padding-top: 0%;
   text-align: center;
+  margin-left: 30px;
 }
 
 a {

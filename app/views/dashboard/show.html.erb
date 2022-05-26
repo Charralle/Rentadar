@@ -9,15 +9,23 @@
         <div class="card_dash">
           <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
           <div class="card-body">
-            <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
-            <p class="card-text">Compétence: <%= booking.daron.badges %></p>
-            <p class="card-text">Prix total: <%= booking.total_price %>$</p>
-            <p class="card-text">Departement: <%= booking.location %></p>
-            <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
+            <h2 class="card-title cool_title_small"><strong><%= booking.daron.name %></strong></h2>
+            <h6 class="card-subtitle mb-2 text-muted">Rendez-vous le <%= booking.start_date %></h6>
+            <p class="card-text">Bio: <%= booking.daron.bio %></p>
+            <br>
+            <br>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Compétence: <%= booking.daron.badges %></li>
+            <li class="list-group-item">Prix total: <%= booking.total_price %>$</li>
+            <li class="list-group-item">Departement: <%= booking.location %></li>
+            <li class="list-group-item">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</li>
+          </ul>
+          <div class="card-body">
             <%= link_to "Annuler #{booking.daron.name}",
-              daron_booking_path(booking.daron, booking),
-              class: "btn btn-outline-danger btn-sm text-hover-light",
-              data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+            daron_booking_path(booking.daron, booking),
+            class: "btn btn-outline-danger btn-sm text-hover-light",
+            data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
           </div>
         </div>
       <% end %>
@@ -35,7 +43,7 @@
               <div class="card_dash">
                 <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
                 <div class="card-body">
-                  <h2 class="card-title"><strong><%= booking.daron.name %></strong></h2>
+                  <h2 class="card-title cool_title_small"><strong><%= booking.daron.name %></strong></h2>
                   <p class="card-text">Prix total : <%= booking.total_price %>$</p>
                   <p class="card-text">Durée totale <%= (booking.end_date - booking.start_date).to_i %> jours</p>
                 </div>
