@@ -20,7 +20,7 @@
           <%= image_tag('jean_pierre_foucault.png') %>
           <div class= "dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-            <a><%= link_to 'Mon Profile', user_session_path %></a>
+            <a><%= link_to 'Mon Profile', profile_path(current_user) %></a>
             <br>
              <a><%= link_to 'Mes Reservation', dashboard_path(current_user) %></a>
              <br>
