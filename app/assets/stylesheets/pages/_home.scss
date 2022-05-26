@@ -73,7 +73,7 @@ margin-top: 50px;
   line-height: 80px;
   padding: 0 2em;
   text-align: center;
-  font-size: 1.2em;
+  font-size: auto;
   font-weight: 100;
   border: 0;
   border-top-left-radius: 0px;
@@ -81,13 +81,13 @@ margin-top: 50px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   color: white;
-  background-color: blue;
+  background-color: red;
   transition: background-color 0.8s ease;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
 .search-button:hover {
-  background-color: HSLA(345, 100%, 60%, 1.00);
+  background-color: blue;
 }
 
 .navbar {
@@ -113,6 +113,7 @@ margin-top: 50px;
   height: 100vh;
   overflow: hidden;
   position: relative;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
  }
  .hero img {
   position: absolute;
@@ -129,28 +130,32 @@ margin-top: 50px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
  }
  .hero .hero-text h1 {
   color: #FFF;
-  font-size: 125px;
+  font-size: 75px;
   margin-bottom: 20px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
  }
  .hero .hero-text p {
   color: #FFF;
   font-size: 50px;
   margin-bottom: 20px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
  }
- .hero .hero-text a {
-  color: #333;
-  font-size: 25px;
-  background-color: #FFF;
-  border: 2px solid #FFF;
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 5px;
-  height: auto;
-  width: auto;
- }
+//  .hero .hero-text a {
+//   color: #333;
+//   font-size: 25px;
+//   background-color: #FFF;
+//   border: 2px solid #FFF;
+//   text-decoration: none;
+//   padding: 15px;
+//   border-radius: 5px;
+//   height: auto;
+//   width: auto;
+//   ;
+//  }
 
 
 // TYPING EFFECT
@@ -180,10 +185,10 @@ margin-top: 50px;
   50% { border-color: orange; }
 }
 
-.see_darons {
-  margin-top: auto;
+// .see_darons {
+//   margin-top: auto;
 
-}
+// }
 
 .typewriter_daron_new {
   text-align: center;
@@ -208,6 +213,36 @@ margin-top: 50px;
 }
 
 .bouton_homepage_2{
-
-
+padding: 1%;
+border-style:bold;
+padding-left: 20px;
+padding-right: 20px;
+background-color: white;
+border-radius: 5px 25px;
+color: white;
+font-weight: bold;
+border-color: white;
+// height: auto;
+// width: auto;
+margin-left: 1250px;
+margin-bottom: 0px;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
+
+
+.bouton_homepage_3{
+  padding: 1%;
+  border-style:bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  border-radius: 5px 25px;
+  color: white;
+  font-weight: bold;
+  border-color: white;
+  // height: auto;
+// width: auto;
+margin-left: 1250px;
+margin-bottom: 0px;
+font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  }

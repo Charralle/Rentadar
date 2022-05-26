@@ -49,7 +49,7 @@ class DaronsController < ApplicationController
   def destroy
     @daron = Daron.find(params[:id])
     @daron.destroy!
-    redirect_to lists_path, status: :see_other
+    redirect_to darons_path, status: :see_other
   end
 
   private

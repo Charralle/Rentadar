@@ -9,12 +9,19 @@
 <div class="hero">
  <%= image_tag('mama.jpg') %>
  <div class="hero-text">
- <h1>Rent a Dar !</h1>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
 
  <div class= typewriter>
- <p>T'as pas de daron? Loue en un dans ta région! </p>
+ <br>
+ <p> Rent a Dar dans ta région! </p>
  </div>
 <%# LA SEARCHBAR  %>
+<br>
+<br>
 
 <form class= "homepage_search" action="/darons" method="get">
   <div class="product-search">
@@ -27,30 +34,28 @@
         <input class="search-input" type="text" placeholder="Code Postal..." autocomplete="on" name="zip_code">
       </div>
       <div class="search-element">
-        <input type="submit" class="search-button">
+        <input type="submit" class="search-button" value="DARONIZE">
       </div>
   </div>
 </form>
-
- <%# <a href="#" title="call to action button">Yes papa!</a>
- </div>
- </div> %>
+</body>
 
 <br>
 <br>
 <br>
-
-<div class= "bouton_homepage_2">
-<div class="see_darons">
+<div class="bouton_homepage_2">
+<div>
 <%= link_to "See Darons", darons_path %>
+</div>
 </div>
 
 <br>
-<br>
 
-<div class="sign_up">
+
+
+<div class="bouton_homepage_3">
+<div>
 <%= link_to "Sign Up!", new_user_registration_path %>
 </div>
 </div>
-
-</body>
+</div>
