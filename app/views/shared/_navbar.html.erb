@@ -16,7 +16,8 @@
         <% if current_user %>
 
         <li class="nav-item dropdown">
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="<%= image_tag('jean_pierre_foucault.png') %>" style="width:45px"/>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:45px" src=">
+          <%= image_tag('jean_pierre_foucault.png') %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
             <a><%= link_to 'Mon Profile', user_session_path %></a>
