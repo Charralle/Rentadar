@@ -1,0 +1,47 @@
+.carousel {
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* make inner block flex to stretch slides */
+.carousel-inner {
+  display: flex;
+}
+
+/* make flex item to stretch parent container to max child height */
+.carousel-item {
+  display: flex !important;
+  /* animate carousel item opacity property */
+  opacity: 0;
+  transition: transform .6s ease-in-out, opacity .3s ease-in-out !important;
+}
+
+/* animate carousel item opacity property */
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item-start,
+.carousel-item-next {
+  opacity: 1;
+}
+/* end of animating of opacity */
+
+/* added for example purpose (make arrows darker) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0);
+}
+
+/* adjusting (stretching) slide's card to max height */
+.carousel-item .container {
+  display: flex;
+  flex-direction: column;
+}
+.carousel-item .card {
+  flex-grow: 1;
+}
