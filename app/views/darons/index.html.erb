@@ -1,7 +1,7 @@
 
 <h1 class = 'cool_title'>Les Darons</h1>
 
-<form action="" method="get" id="daron_search_form">
+<form action="/darons" method="get" id="daron_search_form">
   <div class="daron_search_index">
       <div class="search-element">
         <label class="search-label">Quelle Specialité cherchez vous?</label>
@@ -9,12 +9,13 @@
       </div>
       <div class="search-element">
         <label class="search-label">Ou cherchez vous?</label>
-        <input class="search-input" type="text" placeholder="Code Postal..." class="" autocomplete="on" name="zip_code">
-      </div >
-      <a class = "button_search_index" type="submit" class="search-button">Yes papa!</a>
+        <input class="search-input" type="text" placeholder="Code Postal..." autocomplete="on" name="zip_code">
+      </div>
+      <div class="search-element">
+        <input type="submit" class="search-button">
+      </div>
   </div>
 </form>
-
 
 <%# <div class='daron_cards'>
  %>  <div class="cards">

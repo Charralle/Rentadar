@@ -2,6 +2,14 @@ class DaronsController < ApplicationController
 
   def index
     @darons = Daron.all
+
+    if params[:badges].present?
+      @darons = @darons.where("badges ILIKE ?", params[:badges])
+    end
+
+    if params[:zip_code].present?
+      @darons = @darons.where(zip_code: params[:zip_code])
+    end
   end
 
   def new
