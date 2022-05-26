@@ -16,8 +16,8 @@
 </form>
 
 
-<div class='daron_cards'>
-  <div class="cards">
+<%# <div class='daron_cards'>
+ %>  <div class="cards">
     <% @darons.each do |daron| %>
       <%= link_to daron_path(daron.id) do %>
         <div class="card">
@@ -25,11 +25,14 @@
           <h2><%= daron.name %></h2>
           <h5>Prix : <%= daron.price %> €</h5>
           <p>Bio : <%= daron.bio %></p>
+          <br><br>
+          <br><br>
+          <p >Compétences : <%= daron.badges %></p>
         </div>
       <% end %>
     <% end %>
   </div>
-</div>
-
+<%# </div>
+ %>
 <%= link_to "Back Home", root_path %>
 <%= link_to "Create new Daron", new_daron_path %>

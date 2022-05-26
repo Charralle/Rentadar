@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <a class="navbar-brand" href="https://airbnb-charralle.herokuapp.com/">
-      <img src="../../assets/logo 1.png" style="width:150px"/>
+    <a class="navbar-brand" href="<%= root_path %>">
+       <%= image_tag('logo_1.png', width: 250) %>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,21 +10,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item active">
-        <h5>
-        <a class="devenir_daron_link"><%= link_to 'Devenir Daron', new_daron_path %> </a>
-        </h5>
+
 
         </li>
+        <% if current_user %>
+
         <li class="nav-item dropdown">
-          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="../../assets/jean_pierre_foucault.png" style="width:45px"/>
-          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Mon Profil</a>
-            <a class="dropdown-item" href="#">Mes reservations</a>
-            <%# <a><%= link_to 'Mon Profile', user_session_path %></a>
-            <%# <a><%= link_to 'Mes Reservation', daron_booking_path %></a>
+          <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:45px" src=">
+          <%= image_tag('jean_pierre_foucault.png') %>
+          <div class= "dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+
+            <a><%= link_to 'Mon Profile', user_session_path %></a>
+            <br>
+             <a><%= link_to 'Mes Reservation', dashboard_path(current_user) %></a>
+             <br>
+             <a><%= link_to 'Devenir Daron', new_daron_path %> </a>
 
           </div>
         </li>
+         <% end %>
       </ul>
     </div>
 
