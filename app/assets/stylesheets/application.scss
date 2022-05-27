@@ -17,6 +17,10 @@ body {
   background-color: white;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 70px - 80px);
+}
+
 h1, h5 {
   font-family: 'Anton', sans-serif;
 font-family: 'Koulen', cursive;
