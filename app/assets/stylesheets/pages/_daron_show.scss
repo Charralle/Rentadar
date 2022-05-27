@@ -25,7 +25,7 @@ display: block;
 height: 150px;
 width: 150px;
 border-radius: 50%;
-object-fit:cover;
+object-fit: cover;
 }
 
 .btn {
@@ -44,17 +44,17 @@ width: auto;
 .daron_info {
   align-items: center;
   text-align: center;
-  font-weight:bolder;
-  font-style:italic;
-  border-style:bold;
-padding: 4px;
-width: 80px;
-height: auto;
-background-color: whitesmoke;
-border-radius: 25px;
-color: black;
-font-weight: bold;
-border-color: blue;
+  font-weight: bolder;
+  font-style: italic;
+  border-style: bold;
+  padding: 4px;
+  width: 80px;
+  height: auto;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  color: black;
+  font-weight: bold;
+  border-color: blue;
 
 }
 
@@ -69,8 +69,12 @@ border-color: blue;
   text-decoration: underline;
   text-align: center;
   font-weight:bolder;
-  border-style:bold;
-  font-size:medium;
+  border-style: bold;
+  font-size: medium;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+
+.booking_form {
+  align-items: center;
 }
