@@ -22,10 +22,10 @@
 
 
 <h2 class = 'titre_resa'>Réserver un créneau avec <%= @daron.name %></h2>
-<div class='booking_form'>
+<div class='booking_form text-center'>
   <%= simple_form_for [@daron, @booking] do |f| %>
     <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
     <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-danger btn-block w-5 mt-4 shadow-none" %>
   <% end %>
 </div>
