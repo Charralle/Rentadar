@@ -21,14 +21,8 @@
 <h2 class = 'titre_resa'>Réserver un créneau avec <%= @daron.name %></h2>
 <div class='booking_form'>
   <%= simple_form_for [@daron, @booking] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
+    <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
     <%= f.submit %>
   <% end %>
 </div>
-
-<%# <label for="start">Start date:</label>
-
-<input type="date" id="start" name="start_date"
-       value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"> %>
