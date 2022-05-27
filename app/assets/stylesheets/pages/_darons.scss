@@ -110,6 +110,22 @@ a {
   }
 }
 
+.card_dash_second {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 12px 2px rgba(black, 0.6);
+  transition: 0.2s;
+  color: black;
+  text-align: center;
+  margin: 10px;
+  height: 400px;
+  p { height: 40px; }
+  * {
+    text-decoration: none;
+  }
+}
+
 .cards_dash,.card-group-dash {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

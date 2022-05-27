@@ -7,11 +7,14 @@
   </div>
 <% end %>
 
+
 <img class = 'image_daron_show' src="<%= @daron.profile_picture %>" alt="">
 <br>
 <div class = 'daron_info center'>
-<p >Prix : <%= @daron.price %> €</p>
-<p >Bio : <%= @daron.bio %></p>
+<p class="card-title cool_title_small"><strong><%= @daron.name %></strong></p>
+<br>
+<p>Prix : <%= @daron.price %> €</p>
+<p>Bio : <%= @daron.bio %></p>
 </div>
 
 <br>

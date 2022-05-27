@@ -40,7 +40,7 @@
     <div class="carousel-inner">
       <% @past_bookings.each_with_index do |booking, index| %>
             <div class="carousel-item <% if index == 0 %>active<% end %> mt-5">
-              <div class="card_dash">
+              <div class="card_dash_second">
                 <img class="card-img-top" src="<%= booking.daron.profile_picture %>" alt="">
                 <div class="card-body">
                   <h2 class="card-title cool_title_small"><strong><%= booking.daron.name %></strong></h2>
